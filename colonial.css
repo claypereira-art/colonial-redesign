@@ -252,3 +252,19 @@ h1, h2, h3 { font-family: var(--f-display); font-stretch: 72%; font-weight: 850;
 /* ---------- preview banner ---------- */
 .concept-bar { background: var(--vest); color: var(--ink); text-align: center; padding: 0.5rem var(--gutter); font: 600 0.8rem/1.4 var(--f-mono); letter-spacing: 0.02em; }
 .concept-bar a { font-weight: 600; }
+
+/* ---------- three generations ---------- */
+.family-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.family-photo { margin: 0; padding: 12px 12px 0; background: #fff; border-radius: 2px; box-shadow: 0 30px 60px -36px rgb(0 0 0 / 0.55); transform: rotate(-1deg); }
+.family-photo img { width: 100%; height: auto; }
+.family-photo figcaption { padding: 0.8rem 0.2rem 1rem; color: var(--dim); font-size: var(--step--1); }
+.gens { list-style: none; margin: 0; padding: 0; position: relative; }
+/* a painted red run connects the three generations */
+.gens::before { content: ""; position: absolute; left: 0.55rem; top: 0.6rem; bottom: 0.6rem; width: 4px; background: var(--mark); border-radius: 2px; opacity: 0.85; }
+.gens li { position: relative; padding: 0 0 2.25rem 2.5rem; }
+.gens li:last-child { padding-bottom: 0; }
+.gens li::before { content: ""; position: absolute; left: 0; top: 0.25rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; background: var(--concrete); border: 4px solid var(--mark); }
+.gen-year { display: block; font: 600 var(--step--1)/1 var(--f-mono); letter-spacing: 0.08em; color: var(--mark); margin-bottom: 0.45rem; }
+.gens h3 { font-size: clamp(1.8rem, 1.3rem + 1.4vw, 2.5rem); margin-bottom: 0.5rem; }
+.gens p { margin: 0; color: var(--dim); max-width: 46ch; }
+@media (max-width: 960px) { .family-grid { grid-template-columns: 1fr; } .family-photo { transform: none; } }
