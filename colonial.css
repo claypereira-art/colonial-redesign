@@ -268,3 +268,14 @@ h1, h2, h3 { font-family: var(--f-display); font-stretch: 72%; font-weight: 850;
 .gens h3 { font-size: clamp(1.8rem, 1.3rem + 1.4vw, 2.5rem); margin-bottom: 0.5rem; }
 .gens p { margin: 0; color: var(--dim); max-width: 46ch; }
 @media (max-width: 960px) { .family-grid { grid-template-columns: 1fr; } .family-photo { transform: none; } }
+
+/* ---------- president's letter ---------- */
+.letter { margin: 0; }
+.letter blockquote { margin: 0; padding-left: 1.5rem; border-left: 4px solid var(--mark); }
+.letter blockquote p { margin: 0 0 1.1rem; color: #e3e6e8; font-size: var(--step-1); line-height: 1.5; max-width: 40ch; }
+.letter blockquote p:first-child::first-line { font-weight: 700; }
+.letter figcaption { margin-top: 1.5rem; padding-left: 1.5rem; color: var(--fog); }
+.letter .sig { display: block; font: italic 500 2.4rem/1 "Red Hat Text", serif; font-family: "Brush Script MT", "Segoe Script", cursive; color: #fff; margin-bottom: 0.35rem; }
+.company-note { color: var(--fog); margin: 0 0 1.75rem; }
+
+.company p.values { color: #fff; }
